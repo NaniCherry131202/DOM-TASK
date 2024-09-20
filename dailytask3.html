@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="change">Existing Content</p>
+    <button onclick="change()">Click Me</button>
+
+    <img id="myImage" src=https://i.pinimg.com/736x/ec/cb/7a/eccb7a720eaaed3be4eb366d24757333.jpg>
+    <button onclick="changeImage()">Change Image</button>
+</body>
+<script>
+    //1
+    const element = document.createElement('div')
+    const addText = element.append("Hello,World!")
+    document.body.append(element)
+    //2
+    function change() {
+        document.getElementById('change').textContent = "This is updated content"
+    }
+    //3
+    const ul = document.createElement('ul')
+    const items = ['Item1', 'Item2', 'Item3']
+    items.forEach(text => {
+        const li = document.createElement('li')
+        li.textContent = text
+        ul.appendChild(li)
+    })
+    document.body.appendChild(ul)
+    //4
+    function changeImage() {
+        const element = document.getElementById('myImage')
+        element.setAttribute('src', 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg')
+    }
+    //5 
+    const para=document.createElement('p')
+    para.append("Hlo everyone")
+    document.body.append(para)
+    para.remove()
+</script>
+
+</html>
